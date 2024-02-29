@@ -6,7 +6,7 @@
 
 # attackVm-Kalix86-64
 * Open nm-connection-editor and setup eth0 and eth1 adapters
-* Install a localhost resolver (see [Localhost resolver](Localhost-resolver))
+* Install a localhost resolver (see https://github.com/jhu-information-security-institute/infrastructure/wiki/Localhost-resolver)
 
 # Useful websites
 * https://itectec.com/ubuntu/ubuntu-ubuntu-18-04-nmnetwork-manager-is-not-able-to-manage-network-devices-duplicate
