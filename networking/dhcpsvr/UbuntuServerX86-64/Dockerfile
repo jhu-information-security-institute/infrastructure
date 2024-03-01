@@ -44,6 +44,7 @@ CMD [ "/lib/systemd/systemd", "log-level=info", "unit=sysinit.target" ]
 RUN apt-get install isc-dhcp-server -y
 
 COPY etc_dhcp_dhcpd.conf /etc/dhcp/dhcpd.conf
+COPY etc_default_isc-dhcp-server /etc/default/isc-dhcp-server
 #COPY etc_resolv.conf /etc/resolv.conf
 
 # Finished!
