@@ -24,7 +24,7 @@ echo 'networking/dhcpsvr/UbuntuServerX86-64/.project' >> .git/info/sparse-checko
 echo 'networking/dhcpsvr/UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
 echo 'networking/dhcpsvr/UbuntuServerX86-64/etc_dhcp_dhcpd.conf' >> .git/info/sparse-checkout
 echo 'networking/dhcpsvr/UbuntuServerX86-64/etc_resolv.conf' >> .git/info/sparse-checkout
-ehco 'networking/dhcpsvr/UbuntuServerX86-64/etc_default_isc-dhcp-server' >> .git/info/sparse-checkout
+echo 'networking/dhcpsvr/UbuntuServerX86-64/etc_default_isc-dhcp-server' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
 git pull origin master
