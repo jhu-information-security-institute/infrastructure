@@ -11,7 +11,7 @@ git init
 git config pull.rebase false  # merge (the default strategy)
 
 # Track repository, do not enter subdirectory
-git remote add -f origin https://github.com/jhu-information-security-institute/NwSec.git
+git remote add -f origin https://github.com/jhu-information-security-institute/infrastructure.git
 
 # Enable the tree check feature
 git config core.sparseCheckout true
