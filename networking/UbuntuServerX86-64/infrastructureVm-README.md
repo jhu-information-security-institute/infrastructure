@@ -26,8 +26,8 @@
   [ifupdown]
   managed=false
   ```
-* Start Ubuntu server DHCP Docker container as described on [dhcpsvr](https://github.com/jhu-information-security-institute/NwSec/tree/master/applications/dhcpsvr)
-* Start Ubuntu server DNS Docker container as described on [dnssvr](https://github.com/jhu-information-security-institute/NwSec/tree/master/applications/dnssvr)    
+* Start Ubuntu server DHCP Docker container as described on [dhcpsvr](https://github.com/jhu-information-security-institute/infrastructure/tree/main/networking/dhcpsvr)
+* Start Ubuntu server DNS Docker container as described on [dnssvr](https://github.com/jhu-information-security-institute/infrastructure/tree/main/networking/dnssvr)    
 * Use `ip link show` to query the ethernet mac addresses the VMNet1 virtual network adapters on UbuntuX86-64-infrastructure
 * Update `/etc/dhcp/dhcpd.conf` in the dhcpsvr project based on your ethernet mac addresses from above
 * Reload and restart isc-dhcp-server in your container
