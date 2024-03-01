@@ -27,7 +27,7 @@ echo 'networking/dhcpsvr/UbuntuServerX86-64/etc_resolv.conf' >> .git/info/sparse
 echo 'networking/dhcpsvr/UbuntuServerX86-64/etc_default_isc-dhcp-server' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
-git pull origin master
+git pull origin main
 
 echo 'cd into dhcpsvr/networking/dhcpsvr/UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
 
