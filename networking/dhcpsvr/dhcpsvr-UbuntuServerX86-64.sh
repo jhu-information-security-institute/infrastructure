@@ -20,15 +20,16 @@ git config core.sparseCheckout true
 # That is inside the hidden .git directory that was created
 # by running the command: git init
 # And inside it enter the name of the specific files (or subdirectory) you only want to clone
-echo 'applications/dhcpsvr/UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
-echo 'applications/dhcpsvr/UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
-echo 'applications/dhcpsvr/UbuntuServerX86-64/etc_dhcp_dhcpd.conf' >> .git/info/sparse-checkout
-echo 'applications/dhcpsvr/UbuntuServerX86-64/etc_resolv.conf' >> .git/info/sparse-checkout
+echo 'networking/dhcpsvr/UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
+echo 'networking/dhcpsvr/UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
+echo 'networking/dhcpsvr/UbuntuServerX86-64/etc_dhcp_dhcpd.conf' >> .git/info/sparse-checkout
+echo 'networking/dhcpsvr/UbuntuServerX86-64/etc_resolv.conf' >> .git/info/sparse-checkout
+ehco 'networking/dhcpsvr/UbuntuServerX86-64/etc_default_isc-dhcp-server' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
 git pull origin master
 
-echo 'cd into dhcpsvr/applications/dhcpsvr/UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
+echo 'cd into dhcpsvr/networking/dhcpsvr/UbuntuServerX86-64 and view details in Dockerfile for building, running, and attaching to the container'
 
 # References:
 #   https://terminalroot.com/how-to-clone-only-a-subdirectory-with-git-or-svn
