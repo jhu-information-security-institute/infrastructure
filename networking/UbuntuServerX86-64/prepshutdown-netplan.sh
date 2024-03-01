@@ -21,3 +21,4 @@ while getopts ":hc:" opt; do
 done
 
 rm /etc/netplan/$configfile
+netplan apply
