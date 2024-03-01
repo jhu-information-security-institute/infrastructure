@@ -18,8 +18,9 @@
     [ifupdown]
     managed=false
     ```
+
 # Final setup
-* Use nmcli to query the ethernet mac addresses the VMNet1 virtual network adapters on UbuntuX86-64-target
+* Use `$ ip link show` to query the ethernet mac addresses the VMNet1 virtual network adapters on UbuntuX86-64-target
 * Update `/etc/dhcp/dhcpd.conf` in the dhcpsvr project based on your ethernet mac addresses from above
 * Reload and restart isc-server-dhcp in your container
 * Shutdown UbuntuServerX86-64-target and take a snapshot
@@ -27,14 +28,21 @@
 # Startup
 * Always boot UbuntuX86-64-target after booting UbuntuServerX86-64-infrastructure VM
 * Start desired containers (e.g., nginxsvr or mailsvr)
+* Run `ifconfig` to confirm ip addresses are correct
+* Ensure DNS is setup properly by testing both an internet host and netsec-docker host
+  * `$ nslookup www.google.com`
+  * `$ nslookup dhcp.netsec-docker.isi.jhu.edu`
+* Ensure routing is setup properly by testing both an internet host and netsec-docker host
+  * `$ ping www.google.com`
+  * `$ ping dhcp.netsec-docker.isi.jhu.edu`
 
 # Shutdown
 * Always shut down UbuntuX86-64-target prior to UbuntuX86-64-infrastructure
     
 # Notes
 * If you lose dns for internet sites, it is likely that your `/etc/resolv.conf` needs updating
-    * In your VM, add your internet router's IP address as an additional nameserver by creating a new line in `/etc/resolv.conf`
-    ```
-    nameserver <IPADDRESSOFINTERNETROUTER>
-    nameserver 8.8.8.8
-    ```
+  * In your VM, add your internet router's IP address as an additional nameserver by creating a new line in `/etc/resolv.conf`
+  ```
+  nameserver <IPADDRESSOFINTERNETROUTER>
+  nameserver 8.8.8.8
+  ```
