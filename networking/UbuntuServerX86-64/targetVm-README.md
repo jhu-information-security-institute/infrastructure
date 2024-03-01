@@ -5,7 +5,7 @@
 * Name your VM UbuntuServerX86-64-target and create a snapshot
 * From your target VM, download the files into a sandbox directory using
    ```
-    $ wget https://raw.githubusercontent.com/jhu-information-security-institute/infrastructure/master/networking/targetVm-UbuntuServerX86-64.sh
+    $ wget https://raw.githubusercontent.com/jhu-information-security-institute/infrastructure/main/networking/targetVm-UbuntuServerX86-64.sh
     $ chmod +x targetVm-UbuntuServerX86-64.sh
     $ ./targetVm-UbuntuServerX86-64.sh
     ```
