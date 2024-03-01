@@ -5,13 +5,13 @@
 * Name your VM UbuntuX86-64-infrastructure and create a snapshot
 * From your infrastructure VM, download the files into a sandbox directory using
   ```
-  $ wget https://raw.githubusercontent.com/jhu-information-security-institute/infrastructure/master/networking/infrastructureVm-UbuntuServerX86-64.sh
+  $ wget https://raw.githubusercontent.com/jhu-information-security-institute/infrastructure/main/networking/infrastructureVm-UbuntuServerX86-64.sh
   $ chmod +x infrastructureVm-UbuntuServerX86-64.sh
   $ ./infrastructureVm-UbuntuServerX86-64.sh
   ```
-* Create Ubuntu server DHCP Docker container as described on [dhcpsvr](https://github.com/jhu-information-security-institute/NwSec/tree/master/applications/dhcpsvr)
+* Create Ubuntu server DHCP Docker container as described on [dhcpsvr](https://github.com/jhu-information-security-institute/NwSec/tree/main/applications/dhcpsvr)
   * Please note that you only build it for this step.  Running it is performed later.
-* Create Ubuntu server DNS Docker container as described on [dnssvr](https://github.com/jhu-information-security-institute/NwSec/tree/master/applications/dnssvr)
+* Create Ubuntu server DNS Docker container as described on [dnssvr](https://github.com/jhu-information-security-institute/NwSec/tree/main/applications/dnssvr)
   * Please note that you only build it for this step.  Running it is performed later.
 * Change into the downloaded `infrastructureVm/config/UbuntuServerX86-64` directory
 * Run the installer1 with sudo using: `$ sudo ./infrastructureVm-install1.sh`
