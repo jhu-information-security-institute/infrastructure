@@ -40,24 +40,10 @@
   * Configure dhcp assigned addresses by running `$ sudo ~/netplan/warmstart-netplan.sh -c ~/netplan/100-config.yaml`
   * Start other containers (e.g., suricata or kerberos)
     * start suricata (uses ens41, static ip) container using `$ sudo docker start suricata`
-  * Run `ifconfig` to confirm ip addresses are correct
-  * Ensure DNS is setup properly by testing both an internet host and netsec-docker host
-    * `$ nslookup www.google.com`
-    * `$ nslookup dhcp.netsec-docker.isi.jhu.edu`
-  * Ensure routing is setup properly by testing both an internet host and netsec-docker host
-    * `$ ping www.google.com`
-    * `$ ping dhcp.netsec-docker.isi.jhu.edu`
 
 # Shutdown
 * Always shut down UbuntuX86-64-target prior to shutdown of UbuntuX86-64-infrastructure
 * Before shutting down UbuntuX86-64-infrastructure, run `$ sudo ~/netplan/prepshutdown-netplan.sh -c 100-config.yaml`
     
 # Notes
-* If you lose dns for internet sites, it is likely that your `/etc/resolv.conf` needs updating
-    * In your VM, add your internet router's IP address as an additional nameserver by creating a new line in `/etc/resolv.conf`
-    ```
-    nameserver <IPADDRESSOFINTERNETROUTER>
-    nameserver 8.8.8.8
-    ```
-* If your container build fails due to dns not working, follow the 'Specify DNS servers for Docker' [here](https://docs.docker.com/engine/install/troubleshoot)
 * https://netplan.readthedocs.io/en/latest/netplan-yaml
