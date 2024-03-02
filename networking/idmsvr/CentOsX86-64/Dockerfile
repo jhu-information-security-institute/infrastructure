@@ -1,7 +1,7 @@
 # Description:
 #   This runtime environment example Dockerfile creates a container with a minimal Centos server and ipa server
 # Usage:
-#   From this directory, run $ docker build -t tipasvr .
+#   From this directory, run $ docker build -t tidmsvr .
 #   By default, runs as root
 
 FROM quay.io/centos/centos:stream9
@@ -35,5 +35,5 @@ RUN yum install freeipa-server -y
 
 # Finished!
 RUN echo $'\n\    
-* Container is ready, run it using $ docker run -d --name ipasvr --hostname ipa.netsec.isi.jhu.edu --privileged --network host --cpus=2 tipasvr:latest \n\
+* Container is ready, run it using $ docker run -d --name idmsvr --hostname idm.netsec-docker.isi.jhu.edu --privileged --network host --cpus=2 tipasvr:latest \n\
 * Attach to it using $ docker exec -it ipasvr bash'
