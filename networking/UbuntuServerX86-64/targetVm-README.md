@@ -26,14 +26,7 @@
 
 # Startup
 * Always boot UbuntuX86-64-target after booting UbuntuServerX86-64-infrastructure VM
-* Start desired containers (e.g., nginxsvr or mailsvr)
-* Run `ifconfig` to confirm ip addresses are correct
-* Ensure DNS is setup properly by testing both an internet host and netsec-docker host
-  * `$ nslookup www.google.com`
-  * `$ nslookup dhcp.netsec-docker.isi.jhu.edu`
-* Ensure routing is setup properly by testing both an internet host and netsec-docker host
-  * `$ ping www.google.com`
-  * `$ ping dhcp.netsec-docker.isi.jhu.edu`
+* Start desired containers (e.g., nginxsvr or mailsvr) using `$ docker start <containerName>`
 
 # Shutdown
 * Always shut down UbuntuX86-64-target prior to UbuntuX86-64-infrastructure
