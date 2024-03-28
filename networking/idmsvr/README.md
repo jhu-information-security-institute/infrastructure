@@ -18,8 +18,8 @@ The freeipa server instances on CentOS run in a single docker container.
 1. Download files to build container
     ```
     $ wget https://raw.githubusercontent.com/jhu-information-security-institute/infrastructure/main/networking/idmsvr/idmsvr_CentOsX86-64.sh
-    $ chmod +x ipasvr_CentOsX86-64.sh
-    $ ./ipasvr_CentOsX86-64.sh
+    $ chmod +x idmsvr_CentOsX86-64.sh
+    $ ./idmsvr_CentOsX86-64.sh
     ```
 1. Build, run, attach to container
     ```
