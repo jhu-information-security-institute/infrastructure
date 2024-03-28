@@ -2,7 +2,7 @@
 # running a minimal CentIs image
 
 # Create a directory, so Git doesn't get messy, and enter it
-mkdir ipasvr && cd ipasvr
+mkdir idmsvr && cd idmsvr
 
 # Start a Git repository
 git init
