@@ -32,6 +32,7 @@ CMD ["/usr/lib/systemd/systemd", "--system"]
 #install all the things (ipa server)
 RUN yum install krb5-workstation krb5-libs -y
 RUN yum install freeipa-server -y
+RUN yum install chrony -y
 
 # Finished!
 RUN echo $'\n\    
