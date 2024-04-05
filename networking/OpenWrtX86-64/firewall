@@ -21,11 +21,11 @@ config zone
 	list network 'NETSEC'
 
 config zone
-	option name 'NETSEC-PUBLIC'
+	option name 'NETSEC-PUB'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
-	list network 'NETSEC-PUBLIC'
+	list network 'NETSEC-PUB'
 
 config zone
 	option name 'MSSI-LAB'
@@ -35,5 +35,5 @@ config zone
 	list network 'MSSI-LAB'
 
 config forwarding
-	option src 'NETSEC-PUBLIC'
+	option src 'NETSEC-PUB'
 	option dest 'GRAVEYARD'
