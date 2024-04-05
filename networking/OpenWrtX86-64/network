@@ -1,57 +1,81 @@
+#Network configuration file for Openwrt /etc/config/network
+#Useful links
+#https://openwrt.org/docs/guide-user/network/network_configuration
+#https://openwrt.org/docs/guide-user/network/ipv4/configuration
 
+#Devices
+config device
+	#VLAN 501
+	option name 'br-graveyard'
+	option type 'bridge'
+	list ports 'eth0'
+	option ipv6 '0'
+
+config device
+	#VLAN 601
+	option name 'br-netsec'
+	option type 'bridge'
+	list ports 'eth1'
+	option ipv6 '0'
+
+config device
+	#VLAN 602
+	option name 'br-netsec-public'
+	option type 'bridge'
+	list ports 'eth2'
+	option ipv6 '0'
+
+config device
+	#VLAN 210 (native on device)
+	option name 'br-mssi-lab'
+	option type 'bridge'
+	list ports 'eth3'
+	option ipv6 '0'
+
+#Interfaces
 config interface 'loopback'
 	option device 'lo'
 	option proto 'static'
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
 
-config device
-	option name 'br-graveyard'
-	option type 'bridge'
-	list ports 'eth0'
-
 config interface 'GRAVEYARD'
 	option device 'br-graveyard'
 	option proto 'static'
 	option ipaddr '128.220.249.5'
 	option gateway '128.220.249.1'
-	option netmask '255.255.255.0'
-	option ipv6 'off'
+	option netmask '255.255.255.240'
+	#No local dns server
 	list dns '8.8.8.8'
 	list dns '1.1.1.1'
 	option delegate '0'
 
 config interface 'NETSEC'
+	option device 'br-netsec'
 	option proto 'static'
 	option ipaddr '172.16.0.1'
+	#This host is the gateway
 	option netmask '255.255.255.0'
-	option ipv6 'off'
+	option defaultroute '0'
 	list dns '172.16.0.10'
 	list dns_search 'netsec.isi.jhu.edu'
-	option defaultroute '0'
 	option dns_metric '1'
-	option device 'br-netsec'
 
-config interface 'NETSECPUBLIC'
+config interface 'NETSEC-PUBLIC'
+	option device 'br-netsec-public'
 	option proto 'static'
 	option ipaddr '192.168.15.1'
+	#This host is the gateway
 	option netmask '255.255.255.0'
-	option gateway '128.220.249.5'
-	option delegate '0'
-	option device 'br-netsecpublic'
+	option defaultroute '0'
+	#No local dns server
+	list dns '8.8.8.8'
+	list dns '1.1.1.1'
 
-config device
-	option name 'eth1'
-	option ipv6 '0'
-
-config device
-	option type 'bridge'
-	option name 'br-netsecpublic'
-	list ports 'eth2'
-
-config device
-	option type 'bridge'
-	option name 'br-netsec'
-	list ports 'eth1'
-	option ipv6 '0'
-
+config interface 'MSSI-LAB'
+	option device 'br-mssi-lab'
+	option proto 'dhcp'
+	option defaultroute '0'
+	list dns '192.168.200.10'
+	list dns_search 'mssi-lab.isi.jhu.edu'
+	option dns_metric '2'
