@@ -5,13 +5,13 @@ config defaults
 	option forward 'REJECT'
 
 config zone
-	option name 'GRAVEYARD'
+	option name 'GRAVE'
 	option input 'REJECT'
 	option output 'ACCEPT'
 	option forward 'REJECT'
 	option masq '1'
 	option mtu_fix '1'
-	list network 'GRAVEYARD'
+	list network 'GRAVE'
 
 config zone
 	option name 'NETSEC'
@@ -21,19 +21,19 @@ config zone
 	list network 'NETSEC'
 
 config zone
-	option name 'NETSEC-PUB'
+	option name 'NETSECP'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
-	list network 'NETSEC-PUB'
+	list network 'NETSECP'
 
 config zone
-	option name 'MSSI-LAB'
+	option name 'MSSI'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
-	list network 'MSSI-LAB'
+	list network 'MSSI'
 
 config forwarding
-	option src 'NETSEC-PUB'
-	option dest 'GRAVEYARD'
+	option src 'NETSECP'
+	option dest 'GRAVE'
