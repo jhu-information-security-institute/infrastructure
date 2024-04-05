@@ -8,6 +8,10 @@ config defaults
 	option output 'ACCEPT'
 	option forward 'REJECT'
 
+#Zones
+#  A zone section groups one or more interfaces and serves as a source or destination for forwardings, rules and redirects
+#  zone name length limited to max 11 usable characters
+#  network names in list must match interface names
 config zone
 	option name 'GRAVE'
 	option input 'REJECT'
@@ -38,6 +42,8 @@ config zone
 	option forward 'ACCEPT'
 	list network 'MSSI'
 
+#Forwardings
+#  The forwarding sections control the traffic flow between zones.
 config forwarding
 	option src 'NETSECP'
 	option dest 'GRAVE'
