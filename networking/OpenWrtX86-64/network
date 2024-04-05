@@ -20,7 +20,7 @@ config device
 
 config device
 	#VLAN 602
-	option name 'br-netsec-public'
+	option name 'br-netsec-pub'
 	option type 'bridge'
 	list ports 'eth2'
 	option ipv6 '0'
@@ -61,8 +61,8 @@ config interface 'NETSEC'
 	list dns_search 'netsec.isi.jhu.edu'
 	option dns_metric '1'
 
-config interface 'NETSEC-PUBLIC'
-	option device 'br-netsec-public'
+config interface 'NETSEC-PUB'
+	option device 'br-netsec-pub'
 	option proto 'static'
 	option ipaddr '192.168.15.1'
 	#This host is the gateway
