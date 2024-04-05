@@ -1,38 +1,37 @@
 #Network configuration file for Openwrt /etc/config/network
 #Useful links
-#https://openwrt.org/docs/guide-user/network/network_configuration
-#https://openwrt.org/docs/guide-user/network/ipv4/configuration
+#  https://openwrt.org/docs/guide-user/network/network_configuration
+#  https://openwrt.org/docs/guide-user/network/ipv4/configuration
 
 #Devices
-config device
-	#VLAN 501
+#  device name (physical) length limited to max 14 usable characters (14 does not allow for prepend)
+#  device name must match interface's device below
+config device #L3 bridge device, VLAN 501
 	option name 'br-grave'
 	option type 'bridge'
 	list ports 'eth0'
 	option ipv6 '0'
 
-config device
-	#VLAN 601
+config device #L3 bridge device, VLAN 601
 	option name 'br-ns'
 	option type 'bridge'
 	list ports 'eth1'
 	option ipv6 '0'
 
-config device
-	#VLAN 602
+config device #L3 bridge device, VLAN 602
 	option name 'br-nspub'
 	option type 'bridge'
 	list ports 'eth2'
 	option ipv6 '0'
 
-config device
-	#VLAN 210 (native on device)
+config device #L3 bridge device, VLAN 210 (native on device)
 	option name 'br-mssi'
 	option type 'bridge'
 	list ports 'eth3'
 	option ipv6 '0'
 
 #Interfaces (name length <14)
+#  interface name (logical) length limited to max 8 usable characters (8 allows for prepend)
 config interface 'loopback'
 	option device 'lo'
 	option proto 'static'
