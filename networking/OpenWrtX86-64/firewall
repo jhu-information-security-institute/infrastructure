@@ -1,3 +1,7 @@
+#Firewall configuration file for Openwrt /etc/config/firewall
+#Useful links
+#https://openwrt.org/docs/guide-user/firewall/firewall_configuration
+#https://openwrt.org/docs/guide-user/firewall/fw3_configurations/fw3_config_examples
 
 config defaults
 	option input 'REJECT'
