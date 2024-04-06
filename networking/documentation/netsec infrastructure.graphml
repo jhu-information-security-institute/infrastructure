@@ -82,12 +82,13 @@
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}" Style="{y:GraphMLReference 15}">
-						<y:Label.Text>DNS</y:Label.Text>
+						<y:Label.Text><![CDATA[DNS
+172.16.0.10]]></y:Label.Text>
 					</y:Label>
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-488.4375" Y="-210.125" Width="80" Height="80"/>
+				<y:RectD X="-512.4375" Y="-210.125" Width="80" Height="80"/>
 			</data>
 			<data key="d7">
 				<demostyle:AssetNodeStyle assetName="server.svg" clipMode="outline"/>
@@ -98,7 +99,8 @@
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}">
-						<y:Label.Text>DHCP</y:Label.Text>
+						<y:Label.Text><![CDATA[DHCP
+172.16.0.5]]></y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 3}" textFill="WHITE"/>
 						</y:Label.Style>
@@ -106,7 +108,7 @@
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-432.4375" Y="-210.125" Width="80" Height="80"/>
+				<y:RectD X="-440.9375" Y="-210.125" Width="80" Height="80"/>
 			</data>
 			<data key="d7">
 				<demostyle:AssetNodeStyle assetName="server.svg" clipMode="outline"/>
@@ -118,7 +120,9 @@
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}">
 						<y:Label.Text><![CDATA[shikra (tun)
-128.220.249.5]]></y:Label.Text>
+128.220.249.5
+172.16.0.1
+192.168.15.1]]></y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 3}" textFill="WHITE"/>
 						</y:Label.Style>
@@ -192,7 +196,8 @@
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}">
-						<y:Label.Text><![CDATA[Identity Mgmt]]></y:Label.Text>
+						<y:Label.Text><![CDATA[Identity Mgmt
+172.16.0.3]]></y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 3}" textFill="WHITE"/>
 						</y:Label.Style>
@@ -200,7 +205,7 @@
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-369.4375" Y="-210.125" Width="80" Height="80"/>
+				<y:RectD X="-366.4921875" Y="-210.125" Width="80" Height="80"/>
 			</data>
 			<data key="d7">
 				<demostyle:AssetNodeStyle assetName="server.svg" clipMode="outline"/>
@@ -215,7 +220,7 @@
 		<node id="n4">
 			<data key="d0">6</data>
 			<data key="d5">
-				<y:RectD X="-270.0625" Y="-311.9375" Width="80" Height="80"/>
+				<y:RectD X="-270.0625" Y="-290.125" Width="80" Height="80"/>
 			</data>
 			<data key="d7">
 				<demostyle:AssetNodeStyle assetName="switch.svg" clipMode="outline"/>
@@ -286,7 +291,7 @@
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-448.4375" Y="-111.125" Width="172.75" Height="31"/>
+				<y:RectD X="-448.4375" Y="-97.25" Width="172.75" Height="31"/>
 			</data>
 			<data key="d7">
 				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 7}" fill="{y:GraphMLReference 8}"/>
@@ -320,7 +325,7 @@
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-448.4375" Y="-287.4375" Width="141" Height="31"/>
+				<y:RectD X="-448.4375" Y="-265.625" Width="141" Height="31"/>
 			</data>
 			<data key="d7">
 				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 7}" fill="{y:GraphMLReference 8}"/>
@@ -391,7 +396,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 		<node id="n8">
 			<data key="d0">19</data>
 			<data key="d5">
-				<y:RectD X="-115.75" Y="-311.9375" Width="80" Height="80"/>
+				<y:RectD X="-115.75" Y="-290.125" Width="80" Height="80"/>
 			</data>
 			<data key="d7">
 				<demostyle:AssetNodeStyle assetName="switch.svg" clipMode="outline"/>
@@ -466,7 +471,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-23" Y="-287.4375" Width="141" Height="31"/>
+				<y:RectD X="-23" Y="-265.625" Width="141" Height="31"/>
 			</data>
 			<data key="d7">
 				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 7}" fill="{y:GraphMLReference 8}"/>
@@ -540,7 +545,9 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}">
 						<y:Label.Text><![CDATA[kestrel (tap)
-128.220.249.6]]></y:Label.Text>
+128.220.249.6
+172.16.0.2
+192.168.15.2]]></y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 3}" textFill="WHITE"/>
 						</y:Label.Style>
@@ -947,7 +954,8 @@ openvpn tap 443 TCP]]></y:Label.Text>
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}">
-						<y:Label.Text>NAS</y:Label.Text>
+						<y:Label.Text><![CDATA[NAS
+172.16.0.4]]></y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 3}" textFill="WHITE"/>
 						</y:Label.Style>
@@ -955,7 +963,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-311.65625" Y="-210.125" Width="80" Height="80"/>
+				<y:RectD X="-292.046875" Y="-210.125" Width="80" Height="80"/>
 			</data>
 			<data key="d7">
 				<demostyle:AssetNodeStyle assetName="server.svg" clipMode="outline"/>
