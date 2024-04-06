@@ -2,6 +2,7 @@
 #Useful links
 #  https://openwrt.org/docs/guide-user/base-system/dhcp
 
+#Dnsmasq serves as a downstream caching DNS server advertising itself to DHCP clients
 config dnsmasq
 	option domainneeded '1'
 	option boguspriv '1'
@@ -24,11 +25,12 @@ config dnsmasq
 	option filter_aaaa '0'
 	option filter_a '0'
 
-#config odhcpd 'odhcpd'
-#	option maindhcp '0'
-#	option leasefile '/tmp/hosts/odhcpd'
-#	option leasetrigger '/usr/sbin/odhcpd-update'
-#	option loglevel '4'
+#odhcpd is an embedded DHCP/DHCPv6/RA server & NDP relay
+config odhcpd 'odhcpd'
+	option maindhcp '0'
+	option leasefile '/tmp/hosts/odhcpd'
+	option leasetrigger '/usr/sbin/odhcpd-update'
+	option loglevel '4'
 
 #DHCP pools
 #  interface name must match network interface
