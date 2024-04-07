@@ -1,0 +1,36 @@
+#Firewall configuration file for Openwrt /etc/config/firewall
+#Useful links
+#https://openwrt.org/docs/guide-user/firewall/firewall_configuration
+#https://openwrt.org/docs/guide-user/firewall/fw3_configurations/fw3_config_examples
+
+config defaults
+	option input 'REJECT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+
+#Zones
+#  A zone section groups one or more interfaces and serves as a source or destination for forwardings, rules and redirects
+#  zone name length limited to max 11 usable characters
+#  network names in list must match interface names
+#  INPUT rules for a zone describe what happens to traffic trying to reach the router itself through an interface in that zone.
+#  OUTPUT rules for a zone describe what happens to traffic originating from the router itself going through an interface in that zone.
+#  FORWARD rules for a zone describe what happens to traffic passing between different interfaces belonging in the same zone.
+config zone
+	option name 'MHI'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+	option masq '1'
+	option mtu_fix '1'
+	list network 'GRAVE'
+
+config zone
+	option name 'NETSEC'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+	list network 'NETSEC'
+
+#Forwardings
+#  The forwarding sections control the traffic flow between zones.
+

@@ -1,0 +1,43 @@
+#Network configuration file for Openwrt /etc/config/network
+#Useful links
+#  https://openwrt.org/docs/guide-user/network/network_configuration
+#  https://openwrt.org/docs/guide-user/network/ipv4/configuration
+
+#Devices
+#  device name (physical) length limited to max 14 usable characters (14 does not allow for prepend)
+#  device name must match interface's device below
+config device 
+	option name 'br-mhi'
+	option type 'bridge'
+	list ports 'eth0'
+	option ipv6 '0'
+
+config device
+	option name 'br-ns'
+	option type 'bridge'
+	list ports 'eth1 tap'
+	option ipv6 '0'
+
+#Interfaces (name length <14)
+#  interface name (logical) length limited to max 8 usable characters (8 allows for prepend)
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'MHI'
+	option device 'br-mhi'
+	option proto 'dhcp'
+
+config interface 'NETSEC'
+	option device 'br-ns'
+	option proto 'static'
+	option ipaddr '172.16.0.30'
+	#This host is the gateway
+	option netmask '255.255.255.0'
+	option defaultroute '0'
+	list dns '172.16.0.10'
+	list dns_search 'netsec.isi.jhu.edu'
+	option dns_metric '1'
+
