@@ -1,8 +1,4 @@
-#DHCP and DNS configuration file for Openwrt /etc/config/dhcp
-#Useful links
-#  https://openwrt.org/docs/guide-user/base-system/dhcp
 
-#Dnsmasq serves as a downstream caching DNS server advertising itself to DHCP clients
 config dnsmasq
 	option domainneeded '1'
 	option localise_queries '1'
@@ -16,17 +12,30 @@ config dnsmasq
 	option localservice '1'
 	option ednspacket_max '1232'
 
-#odhcpd is an embedded DHCP/DHCPv6/RA server & NDP relay
 config odhcpd 'odhcpd'
 	option maindhcp '0'
 	option leasefile '/tmp/hosts/odhcpd'
 	option leasetrigger '/usr/sbin/odhcpd-update'
 	option loglevel '4'
 
-#DHCP pools
-#  interface name must match network interface
 config dhcp 'NETSECP'
 	option interface 'NETSECP'
 	option start '100'
 	option limit '150'
 	option leasetime '12h'
+
+config host
+	option name 'merlin'
+	list mac 'BC:24:11:49:F8:5A'
+	option ip '192.168.15.3'
+
+config host
+	option name 'peregrine'
+	list mac 'BC:24:11:C6:CB:7B'
+	option ip '192.168.15.10'
+
+config host
+	option name 'taita'
+	list mac 'BC:24:11:EB:BE:7D'
+	option ip '192.168.15.4'
+
