@@ -3,7 +3,7 @@
 ;
 $TTL	86400			;default TTL for this zone (1 day)
 $ORIGIN netsec-docker.isi.jhu.edu.	;base domain name
-@	IN	SOA	ns.netsec-docker.isi.jhu.edu. root.netsec-docker.isi.jhu.edu (
+@	IN	SOA	ns.netsec-docker.isi.jhu.edu. root.netsec-docker.isi.jhu.edu. (
 			      3		; Serial
 			 604800		; Refresh
 			  86400		; Retry
