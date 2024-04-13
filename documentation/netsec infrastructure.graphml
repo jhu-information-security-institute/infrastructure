@@ -82,39 +82,20 @@
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}" Style="{y:GraphMLReference 15}">
-						<y:Label.Text><![CDATA[DNS
+						<y:Label.Text><![CDATA[peregrine
+DNS/DHCP
 172.16.0.10]]></y:Label.Text>
 					</y:Label>
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-512.4375" Y="-210.125" Width="80" Height="80"/>
+				<y:RectD X="-473.4375" Y="-210.125" Width="80" Height="80"/>
 			</data>
 			<data key="d7">
 				<demostyle:AssetNodeStyle assetName="server.svg" clipMode="outline"/>
 			</data>
 		</node>
 		<node id="n1">
-			<data key="d0">2</data>
-			<data key="d4">
-				<x:List>
-					<y:Label LayoutParameter="{y:GraphMLReference 2}">
-						<y:Label.Text><![CDATA[DHCP
-172.16.0.5]]></y:Label.Text>
-						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 3}" textFill="WHITE"/>
-						</y:Label.Style>
-					</y:Label>
-				</x:List>
-			</data>
-			<data key="d5">
-				<y:RectD X="-440.9375" Y="-210.125" Width="80" Height="80"/>
-			</data>
-			<data key="d7">
-				<demostyle:AssetNodeStyle assetName="server.svg" clipMode="outline"/>
-			</data>
-		</node>
-		<node id="n2">
 			<data key="d0">3</data>
 			<data key="d4">
 				<x:List>
@@ -191,12 +172,13 @@
 				</data>
 			</port>
 		</node>
-		<node id="n3">
+		<node id="n2">
 			<data key="d0">5</data>
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}">
-						<y:Label.Text><![CDATA[Identity Mgmt
+						<y:Label.Text><![CDATA[merlin
+Identity Mgmt
 172.16.0.3]]></y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 3}" textFill="WHITE"/>
@@ -205,7 +187,7 @@
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-366.4921875" Y="-210.125" Width="80" Height="80"/>
+				<y:RectD X="-382.7421875" Y="-210.125" Width="80" Height="80"/>
 			</data>
 			<data key="d7">
 				<demostyle:AssetNodeStyle assetName="server.svg" clipMode="outline"/>
@@ -217,7 +199,7 @@
 				</data>
 			</port>
 		</node>
-		<node id="n4">
+		<node id="n3">
 			<data key="d0">6</data>
 			<data key="d5">
 				<y:RectD X="-270.0625" Y="-290.125" Width="80" Height="80"/>
@@ -271,7 +253,7 @@
 				</data>
 			</port>
 		</node>
-		<node id="n5">
+		<node id="n4">
 			<data key="d0">12</data>
 			<data key="d4">
 				<x:List>
@@ -291,7 +273,7 @@
 				</x:List>
 			</data>
 			<data key="d5">
-				<y:RectD X="-448.4375" Y="-97.25" Width="172.75" Height="31"/>
+				<y:RectD X="-429.1171875" Y="-71.875" Width="172.75" Height="31"/>
 			</data>
 			<data key="d7">
 				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 7}" fill="{y:GraphMLReference 8}"/>
@@ -311,7 +293,7 @@
 				</y:ViewState>
 			</data>
 		</node>
-		<node id="n6">
+		<node id="n5">
 			<data key="d0">16</data>
 			<data key="d4">
 				<x:List>
@@ -345,7 +327,7 @@
 				</y:ViewState>
 			</data>
 		</node>
-		<node id="n7">
+		<node id="n6">
 			<data key="d0">18</data>
 			<data key="d4">
 				<x:List>
@@ -393,7 +375,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n8">
+		<node id="n7">
 			<data key="d0">19</data>
 			<data key="d5">
 				<y:RectD X="-115.75" Y="-290.125" Width="80" Height="80"/>
@@ -457,7 +439,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n9">
+		<node id="n8">
 			<data key="d0">20</data>
 			<data key="d4">
 				<x:List>
@@ -491,7 +473,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</y:ViewState>
 			</data>
 		</node>
-		<node id="n10">
+		<node id="n9">
 			<data key="d0">23</data>
 			<data key="d4">
 				<x:List>
@@ -525,7 +507,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</y:ViewState>
 			</data>
 		</node>
-		<node id="n11">
+		<node id="n10">
 			<data key="d0">24</data>
 			<data key="d5">
 				<y:RectD X="-212.75" Y="-664" Width="110.5" Height="67.75"/>
@@ -539,7 +521,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n12">
+		<node id="n11">
 			<data key="d0">25</data>
 			<data key="d4">
 				<x:List>
@@ -586,7 +568,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n13">
+		<node id="n12">
 			<data key="d0">28</data>
 			<data key="d4">
 				<x:List>
@@ -605,7 +587,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<demostyle:AssetNodeStyle assetName="server.svg" clipMode="outline"/>
 			</data>
 		</node>
-		<node id="n14">
+		<node id="n13">
 			<data key="d0">30</data>
 			<data key="d4">
 				<x:List>
@@ -638,7 +620,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</y:ViewState>
 			</data>
 		</node>
-		<node id="n15">
+		<node id="n14">
 			<data key="d0">31</data>
 			<data key="d5">
 				<y:RectD X="-210.03125" Y="-135.625" Width="80" Height="80"/>
@@ -653,7 +635,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n16">
+		<node id="n15">
 			<data key="d0">32</data>
 			<data key="d4">
 				<x:List>
@@ -691,7 +673,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n17">
+		<node id="n16">
 			<data key="d0">33</data>
 			<data key="d5">
 				<y:RectD X="16.125" Y="93.625" Width="141" Height="31"/>
@@ -714,7 +696,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</y:ViewState>
 			</data>
 		</node>
-		<node id="n18">
+		<node id="n17">
 			<data key="d0">34</data>
 			<data key="d5">
 				<y:RectD X="-155.21875" Y="-135.625" Width="80" Height="80"/>
@@ -729,7 +711,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n19">
+		<node id="n18">
 			<data key="d0">35</data>
 			<data key="d4">
 				<x:List>
@@ -754,7 +736,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n20">
+		<node id="n19">
 			<data key="d0">36</data>
 			<data key="d5">
 				<y:RectD X="-98.5" Y="77.125" Width="64" Height="64"/>
@@ -763,7 +745,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<yjs:ImageNodeStyle image="{y:GraphMLReference 16}"/>
 			</data>
 		</node>
-		<node id="n21">
+		<node id="n20">
 			<data key="d0">37</data>
 			<data key="d5">
 				<y:RectD X="-50.75" Y="77.125" Width="64" Height="64"/>
@@ -772,7 +754,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<yjs:ImageNodeStyle image="{y:GraphMLReference 16}"/>
 			</data>
 		</node>
-		<node id="n22">
+		<node id="n21">
 			<data key="d0">38</data>
 			<data key="d4">
 				<x:List>
@@ -788,7 +770,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<yjs:ImageNodeStyle image="{y:GraphMLReference 16}"/>
 			</data>
 		</node>
-		<node id="n23">
+		<node id="n22">
 			<data key="d0">39</data>
 			<data key="d4">
 				<x:List>
@@ -804,7 +786,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<demostyle:AssetNodeStyle assetName="wlan.svg" clipMode="outline"/>
 			</data>
 		</node>
-		<node id="n24">
+		<node id="n23">
 			<data key="d0">42</data>
 			<data key="d5">
 				<y:RectD X="389.625" Y="-78" Width="60" Height="60"/>
@@ -825,7 +807,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n25">
+		<node id="n24">
 			<data key="d0">43</data>
 			<data key="d5">
 				<y:RectD X="-676.75" Y="172" Width="60" Height="60"/>
@@ -846,7 +828,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<node id="n26">
+		<node id="n25">
 			<data key="d0">44</data>
 			<data key="d5">
 				<y:RectD X="-2.5" Y="125.125" Width="141" Height="31"/>
@@ -869,7 +851,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</y:ViewState>
 			</data>
 		</node>
-		<node id="n27">
+		<node id="n26">
 			<data key="d0">45</data>
 			<data key="d4">
 				<x:List>
@@ -885,7 +867,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<yjs:ImageNodeStyle image="{y:GraphMLReference 16}"/>
 			</data>
 		</node>
-		<node id="n28">
+		<node id="n27">
 			<data key="d0">46</data>
 			<data key="d4">
 				<x:List>
@@ -901,7 +883,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<yjs:ImageNodeStyle image="{y:GraphMLReference 16}"/>
 			</data>
 		</node>
-		<node id="n29">
+		<node id="n28">
 			<data key="d0">47</data>
 			<data key="d4">
 				<x:List>
@@ -917,7 +899,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<demostyle:AssetNodeStyle assetName="wlan.svg" clipMode="outline"/>
 			</data>
 		</node>
-		<node id="n30">
+		<node id="n29">
 			<data key="d0">48</data>
 			<data key="d4">
 				<x:List>
@@ -933,7 +915,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<yjs:ImageNodeStyle image="{y:GraphMLReference 16}"/>
 			</data>
 		</node>
-		<node id="n31">
+		<node id="n30">
 			<data key="d0">49</data>
 			<data key="d4">
 				<x:List>
@@ -949,12 +931,13 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<yjs:ImageNodeStyle image="{y:GraphMLReference 16}"/>
 			</data>
 		</node>
-		<node id="n32">
+		<node id="n31">
 			<data key="d0">50</data>
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{y:GraphMLReference 2}">
-						<y:Label.Text><![CDATA[NAS
+						<y:Label.Text><![CDATA[taita
+NAS
 172.16.0.4]]></y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 3}" textFill="WHITE"/>
@@ -975,12 +958,12 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				</data>
 			</port>
 		</node>
-		<edge id="e0" source="n11" target="n7" sourceport="p0" targetport="p0">
+		<edge id="e0" source="n10" target="n6" sourceport="p0" targetport="p0">
 			<data key="d13">
 				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 18}" targetArrow="{y:GraphMLReference 19}"/>
 			</data>
 		</edge>
-		<edge id="e1" source="n25" target="n24" sourceport="p0" targetport="p0">
+		<edge id="e1" source="n24" target="n23" sourceport="p0" targetport="p0">
 			<data key="d11">
 				<x:List>
 					<y:Label Style="{y:GraphMLReference 15}">
@@ -999,7 +982,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<yjs:ArcEdgeStyle stroke="#FFFFFFFF" height="20"/>
 			</data>
 		</edge>
-		<edge id="e2" source="n7" target="n2" sourceport="p2" targetport="p8">
+		<edge id="e2" source="n6" target="n1" sourceport="p2" targetport="p8">
 			<data key="d12">
 				<x:List>
 					<y:Bend Location="-203.25,-482.71610169491527"/>
@@ -1009,7 +992,7 @@ openvpn tap 443 TCP]]></y:Label.Text>
 				<y:GraphMLReference ResourceKey="20"/>
 			</data>
 		</edge>
-		<edge id="e3" source="n7" target="n12" sourceport="p3" targetport="p4">
+		<edge id="e3" source="n6" target="n11" sourceport="p3" targetport="p4">
 			<data key="d12">
 				<x:List>
 					<y:Bend Location="-106.75,-482.71610169491527"/>
