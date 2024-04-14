@@ -2,7 +2,7 @@
 # running a minimal Ubuntu server image
 
 # Create a directory, so Git doesn't get messy, and enter it
-mkdir nfssvr && cd nfssvr
+mkdir nassvr && cd nassvr
 
 # Start a Git repository
 git init
@@ -20,6 +20,7 @@ git config core.sparseCheckout true
 # That is inside the hidden .git directory that was created
 # by running the command: git init
 # And inside it enter the name of the specific files (or subdirectory) you only want to clone
+echo 'netsec/taita/nassvr/README.md' >> .git/info/sparse-checkout
 echo 'netsec/taita/nassvr/UbuntuServerX86-64/.project' >> .git/info/sparse-checkout
 echo 'netsec/taita/nassvr/UbuntuServerX86-64/Dockerfile' >> .git/info/sparse-checkout
 echo 'netsec/taita/nassvr/UbuntuServerX86-64/etc_exports' >> .git/info/sparse-checkout
