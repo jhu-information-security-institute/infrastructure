@@ -38,5 +38,5 @@ COPY etc_chrony.conf /etc/chrony.conf
 
 # Finished!
 RUN echo $'\n\    
-* Container is ready, run it using $ docker run -d --name idmsvr --hostname auth.netsec-docker.isi.jhu.edu --privileged --network host --cpus=2 tidmsvr:latest \n\
+* Container is ready, run it using $ docker run -d --name idmsvr --security-opt seccomp=unconfined --cgroup-parent=docker.slice --cgroupns private --tmpfs /tmp --tmpfs /run --tmpfs /run/lock --network host --cpus=2 tidmsvr:latest \n\
 * Attach to it using $ docker exec -it idmsvr bash'
