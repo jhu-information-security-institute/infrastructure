@@ -1,3 +1,9 @@
+1. Download files
+    ```
+    $ wget https://raw.githubusercontent.com/jhu-information-security-institute/NwSec/main/applications/attack/attack-KaliX86-64.sh
+    $ chmod +x attack-KaliX86-64.sh
+    $ ./attack-KaliX86-64.sh
+    ```
 # Application overview
 ## freeipa-server
 * setup DNS and the hostname in the VM
