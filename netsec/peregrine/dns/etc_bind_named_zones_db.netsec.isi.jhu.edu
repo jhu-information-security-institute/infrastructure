@@ -1,0 +1,23 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	86400			;default TTL for this zone (1 day)
+$ORIGIN netsec.isi.jhu.edu.	;base domain name
+@	IN	SOA	peregrine.netsec.isi.jhu.edu. root.netsec.isi.hu.edu. (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+; name servers - NS records
+netsec.isi.jhu.edu.				IN	NS	peregrine.netsec.isi.jhu.edu.
+
+; name servers - A records
+peregrine.netsec.isi.jhu.edu.			IN	A	172.16.0.10
+
+; hosts
+shikra.netsec.isi.jhu.edu.			IN	A	172.16.0.1
+kestrel.netsec.isi.jhu.edu.			IN	A	172.16.0.2
+merlin.netsec.isi.jhu.edu.			IN	A	172.16.0.3
+taita.netsec.isi.jhu.edu.			IN	A	172.16.0.4

@@ -1,0 +1,20 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	peregrine.netsec.isi.jhu.edu. root.netsec.isi.jhu.edu. (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+; name servers - NS records
+0.16.172.in-addr.arpa.		IN	NS	peregrine.netsec.isi.jhu.edu.
+
+; PTR records
+10.0.16.172.in-addr.arpa.	IN	PTR	peregrine.netsec.isi.jhu.edu.	; 172.16.0.10
+1.0.16.172.in-addr.arpa.	IN	PTR	shikra.netsec.isi.jhu.edu.	; 172.16.0.1
+2.0.16.172.in-addr.arpa.	IN	PTR	kestrel.netsec.isi.jhu.edu.	; 172.16.0.2
+3.0.16.172.in-addr.arpa.	IN	PTR	merlin.netsec.isi.jhu.edu.	; 172.16.0.3
+4.0.16.172.in-addr.arpa.	IN	PTR	taita.netsec.isi.jhu.edu.	; 172.16.0.4

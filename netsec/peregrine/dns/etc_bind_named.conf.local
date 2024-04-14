@@ -1,0 +1,19 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+// forward zone
+zone "netsec.isi.jhu.edu" {
+    type master;
+    file "/etc/bind/zones/db.netsec.isi.jhu.edu"; # zone file path
+};
+
+// reverse zone
+zone "0.16.172.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.0.16.172";  # 172.16.0.0/24 subnet
+};
