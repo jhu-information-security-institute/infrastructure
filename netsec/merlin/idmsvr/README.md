@@ -7,7 +7,12 @@
 # Application overview
 ## freeipa-server
 * setup DNS and the hostname in the VM
-* build the container as instructed below
+* install the packages
+```
+# yum install krb5-workstation krb5-libs -y
+# yum install freeipa-server -y
+# yum install chrony -y
+```
 * configure ipa server: `# ipa-server-install --hostname=auth.netsec-docker.isi.jhu.edu --domain=netsec-docker.isi.jhu.edu --realm=NETSEC-DOCKER.ISI.JHU.EDU`
     * say no when asked to configure integrated DNS
     * specify passwords when prompted
