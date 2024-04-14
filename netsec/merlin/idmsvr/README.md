@@ -13,7 +13,7 @@
 # yum install freeipa-server -y
 # yum install chrony -y
 ```
-* configure ipa server: `# ipa-server-install --hostname=auth.netsec-docker.isi.jhu.edu --domain=netsec-docker.isi.jhu.edu --realm=NETSEC-DOCKER.ISI.JHU.EDU`
+* configure ipa server: `# ipa-server-install --hostname=merlin.netsec.isi.jhu.edu --domain=netsec.isi.jhu.edu --realm=NETSEC.ISI.JHU.EDU`
     * say no when asked to configure integrated DNS
     * specify passwords when prompted
 * Configure the firewall in the host (we are opening ports this host is running servers from)
@@ -32,7 +32,7 @@
     * install it: `$ sudo apt-get install chrony`
     * Add the following line to `/etc/chrony/chrony.conf`
     ```
-    pool ipa.netsec.isi.jhu.edu iburst
+    pool merlin.netsec.isi.jhu.edu iburst
     ```
     * Then, enable, reload, start chrony service and query status with:
     ```
