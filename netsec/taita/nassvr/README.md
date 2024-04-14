@@ -27,6 +27,7 @@
     ```
     ALL:ALL
     ```
-    * Export the shares: `# exportfs -a`
-    * Restart the nfs server: `# systemctl start nfs-kernel-server`
+    * Export the shares: `# exportfs -ra`
+    * Start the nfs server: `# systemctl start nfs-kernel-server`
     * Make a file to see from the client: `# touch /netsec/rootfs/hello`
+    * View the current exports: `# showmount -e`
