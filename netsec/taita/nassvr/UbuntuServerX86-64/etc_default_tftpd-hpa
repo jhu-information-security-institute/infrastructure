@@ -1,0 +1,7 @@
+# /etc/default/tftpd-hpa
+RUN_DAEMON="yes"
+TFTP_USERNAME="tftp"
+#TFTP_DIRECTORY="/srv/tftp"
+TFTP_DIRECTORY="/tftpboot"
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--ipv4 --timeout 300 --secure"
