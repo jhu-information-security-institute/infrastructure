@@ -54,28 +54,6 @@ services in /etc/sssd/sssd.conf (source):
     # systemctl disable sssd-sudo.socket
     # systemctl disable sssd-ssh.socket
     ```
-
-## CentOS
-The freeipa server instances on CentOS run in a single docker container.
-
-# Runtime environment setup
-## CentOS
-1. Download files to build container
-    ```
-    $ wget https://github.com/jhu-information-security-institute/infrastructure/raw/main/netsec/merlin/idmsvr/idmsvr_CentOsX86-64.sh
-    $ chmod +x idmsvr_CentOsX86-64.sh
-    $ ./idmsvr_CentOsX86-64.sh
-    ```
-1. Build, run, attach to container
-    ```
-    $ docker build -t tidmsvr .
-    $ docker run -d --name idmsvr --security-opt seccomp=unconfined --cgroup-parent=docker.slice --cgroupns private --tmpfs /tmp --tmpfs /run --tmpfs /run/lock --network host --cpus=2 tidmsvr:latest
-    $ docker exec -it idmsvr bash
-    ```
-1. Install the server (run in the container)
-    ```
-    # ipa-server-install --hostname='merlin.netsec.isi.jhu.edu' --domain=netsec.isi.jhu.edu --realm=NETSEC.ISI.JHU.EDU --no-ntp
-    ```
 # Useful websites
 * https://www.freeipa.org/page/Quick_Start_Guide
 

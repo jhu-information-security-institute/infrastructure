@@ -20,7 +20,6 @@ git config core.sparseCheckout true
 # That is inside the hidden .git directory that was created
 # by running the command: git init
 # And inside it enter the name of the specific files (or subdirectory) you only want to clone
-echo 'netsec/merlin/idmsvr/CentOsX86-64/Dockerfile' >> .git/info/sparse-checkout
 echo 'netsec/merlin/idmsvr/CentOsX86-64/etc_chrony.conf' >> .git/info/sparse-checkout
 echo 'netsec/merlin/idmsvr/README.md' >> .git/info/sparse-checkout
 
