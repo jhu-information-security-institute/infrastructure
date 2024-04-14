@@ -1,8 +1,8 @@
 1. Download files
     ```
-    $ wget https://raw.githubusercontent.com/jhu-information-security-institute/NwSec/main/applications/attack/attack-KaliX86-64.sh
-    $ chmod +x attack-KaliX86-64.sh
-    $ ./attack-KaliX86-64.sh
+    $ wget https://github.com/jhu-information-security-institute/infrastructure/raw/main/netsec/merlin/idmsvr/idmsvr_CentOsX86-64.sh
+    $ chmod +x idmsvr_CentOsX86-64.sh
+    $ ./idmsvr_CentOsX86-64.sh
     ```
 # Application overview
 ## freeipa-server
