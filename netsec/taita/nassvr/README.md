@@ -5,8 +5,9 @@
     * /tftpboot for the RPI PXE boot images
     * /netsec/home for the user home directories
 1. Prep the volumes
-    * Update `/etc/fstab` in the VM to mount the x3 logical volumes created above using their appropriate `/dev/sd<X>1` into `/mnt/nfs_home`, `/mnt/nfs_rootfs`, `/mnt/tftp`
+    * Update `/etc/fstab` in the VM (see example commands in [etc_fstab](https://github.com/jhu-information-security-institute/infrastructure/raw/main/netsec/taita/nassvr/UbuntuServerX86-64/etc_fstab)) to mount the x3 logical volumes created above using their appropriate `/dev/sd<X>1` into `/mnt/nfs_home`, `/mnt/nfs_rootfs`, `/mnt/tftp`
     * Update `/etc/fstab` in the VM to create bind mounts between `/mnt/nfs_home` <-> `/netsec/home`, `/mnt/nfs_rootfs` <-> `/netsec/rootfs`, and `/mnt/tftp` <-> `/tftpboot`
+    * Reboot the VM
 1. Disable the firewall on the appropriate port:
     `$ sudo ufw allow 2049/tcp`
 1. Download files to build container
