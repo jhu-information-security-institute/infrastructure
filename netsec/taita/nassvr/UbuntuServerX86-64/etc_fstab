@@ -11,6 +11,6 @@
 /dev/sdc1    	/mnt/nfs_home	ext4	defaults	0	0
 /dev/sdd1    	/mnt/nfs_rootfs	ext4	defaults	0	1
 /dev/sde1 	/mnt/tftp	ext4	defaults	0	2
-/mnt/nfs_rootfs	/netsec/rootfs	none	bind		0	0
 /mnt/nfs_home	/netsec/home	none	bind		0	0
+/mnt/nfs_rootfs	/netsec/rootfs	none	bind		0	0
 /mnt/tftp	/tftpboot	none	bind		0	0
