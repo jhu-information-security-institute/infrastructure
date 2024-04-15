@@ -13,6 +13,15 @@
 # yum install freeipa-server -y
 # yum install chrony -y
 ```
+* edit `/etc/chrony.conf` and add line
+```
+allow 172.16.0.0/24
+```
+* reload and start chronyd
+```
+# systemctl start chronyd
+# systemctl enable chronyd
+```
 * configure ipa server: `# ipa-server-install --hostname=merlin.netsec.isi.jhu.edu --domain=netsec.isi.jhu.edu --realm=NETSEC.ISI.JHU.EDU`
     * say no when asked to configure integrated DNS
     * specify passwords when prompted
