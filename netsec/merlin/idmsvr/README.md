@@ -19,6 +19,7 @@ allow 172.16.0.0/24
 ```
 * reload and start chronyd
 ```
+# systemctl daemon-reload
 # systemctl start chronyd
 # systemctl enable chronyd
 ```
