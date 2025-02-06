@@ -18,7 +18,6 @@
 * Edit nameserver IP address and domain name in nameserver section of `ens33` portion within `/etc/netplan/99-config.yaml` to values for your internet router
   * Run `$ ip route show` in a terminal and use whatever ip address the "default via XXX.XXX.XXX.XXX" is
   * Ensure that the device names `ens??` match with those created in your vm
-* Disable NetworkManager (it is installed by ubuntu-desktop) using: `$ sudo systemctl disable NetworkManager`
 * Run `$ sudo netplan apply`
 * Ensure that the device names `ens??` within `~/netplan/100-config.yaml` match with those created in your vm
 * Ensure that /etc/NetworkManager/NetworkManager.conf has the lines below
