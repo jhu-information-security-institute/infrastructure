@@ -16,12 +16,12 @@ BIND 9 has evolved to be a very flexible, full-featured DNS system. Whatever you
     $ docker run -d --name dnssvr --hostname ns.netsec-docker.isi.jhu.edu --add-host ns.netsec-docker.isi.jhu.edu:127.0.1.1 --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --security-opt seccomp=unconfined --cgroup-parent=docker.slice --cgroupns private --tmpfs /tmp --tmpfs /run --tmpfs /run/lock --network host --cpus=1 tdnssvr:latest
     $ docker exec -it dnssvr bash 
     ```
-1. Enable the server using: `# systemctl enable bind9`
+1. Enable the server using: `(container) # systemctl enable bind9`
 
 ## Notes
-* Restart the server using: `# systemctl restart bind9`
-* Check the server status (there should be no errors) using: `# systemctl status bind9`
-* View the server log: `# journalctl -u bind9`
+* Restart the server using: `(container) # systemctl restart bind9`
+* Check the server status (there should be no errors) using: `(container) # systemctl status bind9`
+* View the server log: `(container) # journalctl -u bind9`
 * Configure the server by editing `/etc/bind/zones/db.25.168.192` and `/etc/bind/zones/db.netsec-docker.isi.jhu.edu`
 
 # Useful websites
