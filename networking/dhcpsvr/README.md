@@ -25,9 +25,9 @@ ISC DHCP offers a complete open source solution for implementing DHCP servers, r
 1. Restart the server using: `(container) # systemctl restart isc-dhcp-server`
 
 ## Notes
-* Restart the server using: `$ sudo systemctl restart isc-dhcp-server`
-* Check the server status (there should be no errors) using: `$ sudo systemctl status isc-dhcp-server`
-* View the server log: `$ sudo journalctl -u isc-dhcp-server`
+* Restart the server using: `(container) # systemctl restart isc-dhcp-server`
+* Check the server status (there should be no errors) using: `(container) # systemctl status isc-dhcp-server`
+* View the server log: `(container) # journalctl -u isc-dhcp-server`
 * Configure the server by editing `/etc/dhcp/dhcpd.conf`
 
 # Useful websites
