@@ -46,7 +46,9 @@
 
 # Shutdown
 * Always shut down UbuntuX86-64-target prior to shutdown of UbuntuX86-64-infrastructure
-* Before shutting down UbuntuX86-64-infrastructure, run `$ sudo ~/netplan/prepshutdown-netplan.sh -c 100-config.yaml`
+* Before shutting down UbuntuX86-64-infrastructure
+    * run `$ sudo ~/netplan/prepshutdown-netplan.sh -c 100-config.yaml`
+    * run `$ docker stop dnssvr dhcpsvr`
     
 # Notes
 * https://netplan.readthedocs.io/en/latest/netplan-yaml
