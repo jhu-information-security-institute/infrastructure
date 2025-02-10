@@ -4,7 +4,7 @@ Versatile, classic, complete name server software
 BIND 9 has evolved to be a very flexible, full-featured DNS system. Whatever your application is, BIND 9 probably has the required features. As the first, oldest, and most commonly deployed solution, there are more network engineers who are already familiar with BIND 9 than with any other system.
 
 # Runtime environment setup
-1. Download files to build container
+1. Download files to build container into a sandbox directory using
     ```
     $ wget https://raw.githubusercontent.com/jhu-information-security-institute/infrastructure/main/networking/dnssvr/dnssvr-UbuntuServerX86-64.sh
     $ chmod +x dnssvr-UbuntuServerX86-64.sh
