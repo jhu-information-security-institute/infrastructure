@@ -1,6 +1,7 @@
 # Setup
 * Create the Ubuntu server VM as outlined on the Wiki
-* Ensure that your VM has x4 additional virtual network interfaces that are attached to VMnet1 and VMWare's DHCP server is disabled on VMnet1
+* Ensure that your VM has x5 additional virtual network interfaces that are attached to VMnet1 and VMWare's DHCP server is disabled on VMnet1
+* Setup git preferences for main branch by running: `$ git config --global init.defaultBranch main`
 * Name your VM UbuntuX86-64-infrastructure and create a snapshot
 * From your infrastructure VM, download the files into a sandbox directory using
   ```
