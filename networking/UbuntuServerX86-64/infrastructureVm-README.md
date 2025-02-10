@@ -15,6 +15,7 @@
   * Please note that you only build it for this step.  Running it is performed later.
 * Change into the downloaded `infrastructureVm/config/UbuntuServerX86-64` directory
 * Run the installer1 with sudo using: `$ sudo ./infrastructureVm-install1.sh`
+    * Note: this step disabled NetworkManager
 * Run the installer2 using: `$ ./infrastructureVm-install2.sh`
 * Edit nameserver IP address and domain name in nameserver section of `ens33` portion within `/etc/netplan/99-config.yaml` to values for your internet router
   * Run `$ ip route show` in a terminal and use whatever ip address the "default via XXX.XXX.XXX.XXX" is
