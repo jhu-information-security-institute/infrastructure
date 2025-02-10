@@ -20,6 +20,7 @@
 * Edit nameserver IP address and domain name in nameserver section of `ens33` portion within `/etc/netplan/99-config.yaml` to values for your internet router
   * Run `$ ip route show` in a terminal and use whatever ip address the "default via XXX.XXX.XXX.XXX" is
   * Ensure that the device names `ens??` match with those created in your vm
+  * Note: only the first 3 interfaces are used (e.g., ens33, ens37, and ens38)
 * Run `$ sudo netplan apply`
 * Ensure that the device names `ens??` within `~/netplan/100-config.yaml` match with those created in your vm
 * Ensure that /etc/NetworkManager/NetworkManager.conf has the lines below
@@ -30,18 +31,18 @@
 * Start Ubuntu server DHCP Docker container as described on [dhcpsvr](https://github.com/jhu-information-security-institute/infrastructure/tree/main/networking/dhcpsvr)
 * Start Ubuntu server DNS Docker container as described on [dnssvr](https://github.com/jhu-information-security-institute/infrastructure/tree/main/networking/dnssvr)    
 * Use `ip link show` to query the ethernet mac addresses the VMNet1 virtual network adapters on UbuntuX86-64-infrastructure
-* Update `/etc/dhcp/dhcpd.conf` in the dhcpsvr project based on your ethernet mac addresses from above
-* Reload and restart isc-dhcp-server in your container
+* Update `/etc/dhcp/dhcpd.conf` in the dhcpsvr container based on your ethernet mac addresses from above
+* Reload and restart isc-dhcp-server in your dhcpsvr container
 * Shutdown UbuntuServerX86-64-infrastructure and take a snapshot
 
 # Startup
 * UbuntuX86-64-infrastructure should always boot first (before UbuntuX86-64-target) because it provides DHCP and DNS to VMNet1
 * After booting UbuntuX86-64-infrastructure
-  * Start dnssvr (uses ens38, static ip) container using `$ sudo docker start dnssvr`
-  * Start dhcpsvr (uses ens39, static ip) container using `$ sudo docker start dhcpsvr`
+  * Start dnssvr (uses ens38, static ip) container using `$ docker start dnssvr`
+  * Start dhcpsvr (uses ens39, static ip) container using `$ docker start dhcpsvr`
   * Configure dhcp assigned addresses by running `$ sudo ~/netplan/warmstart-netplan.sh -c ~/netplan/100-config.yaml`
-  * Start other containers (e.g., suricata or kerberos)
-    * start suricata (uses ens41, static ip) container using `$ sudo docker start suricata`
+  * Start other containers (e.g., suricata or auth)
+    * start suricata (uses ens41, static ip) container using `$ docker start suricata`
 
 # Shutdown
 * Always shut down UbuntuX86-64-target prior to shutdown of UbuntuX86-64-infrastructure
