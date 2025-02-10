@@ -4,7 +4,7 @@ Enterprise-grade solution for IP address-configuration needs
 ISC DHCP offers a complete open source solution for implementing DHCP servers, relay agents, and clients. ISC DHCP supports both IPv4 and IPv6, and is suitable for use in high-volume and high-reliability applications.
 
 # Runtime environment setup
-1. Download files to build container
+1. Download files to build container into a sandbox directory using
     ```
     $ wget https://raw.githubusercontent.com/jhu-information-security-institute/infrastructure/main/networking/dhcpsvr/dhcpsvr-UbuntuServerX86-64.sh
     $ chmod +x dhcpsvr-UbuntuServerX86-64.sh
