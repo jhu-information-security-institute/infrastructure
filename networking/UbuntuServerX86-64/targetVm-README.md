@@ -1,6 +1,7 @@
 # Initial setup
 * Clone the Ubuntu server VM as outlined on the Wiki
 * Ensure that your VM has x4 additional virtual network interfaces that are attached to VMnet1 and VMWare's DHCP server is disabled on VMnet1
+* Setup git preferences for main branch by running: `$ git config --global init.defaultBranch main`
 * Name your VM UbuntuServerX86-64-target and create a snapshot
 * From your target VM, download the files into a sandbox directory using
    ```
