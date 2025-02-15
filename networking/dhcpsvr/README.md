@@ -17,7 +17,7 @@ ISC DHCP offers a complete open source solution for implementing DHCP servers, r
     $ docker exec -it dhcpsvr bash 
     ```
 1. Enable the server using: `(container) # systemctl enable isc-dhcp-server`
-1. Edit `/etc/dhcp/dhcpd.conf` and update MAC addresseses appropriately to match your virtual network adapters
+1. Edit `/etc/dhcp/dhcpd.conf` and `/etc/default/isc-dhcp-server` to update MAC addresseses appropriately to match your virtual network adapters
     * You can view MAC addresses using `$ ip link show`
 1. Reload the configuration by running `(container) # systemctl daemon-reload`
 1. To eliminate the error mentioned below, disable isc-dhcp-server6 by running `(container) # systemctl disable isc-dhcp-server6`
