@@ -19,7 +19,11 @@
     [ifupdown]
     managed=false
     ```
-
+* Run the commands below to restrict the permissions on the netplan *.yaml configuration files
+  ```
+  $ sudo chmod 600 /etc/netplan/101-config.yaml
+  ```
+  
 # Final setup
 * Use `$ ip link show` to query the ethernet mac addresses the VMNet1 virtual network adapters on UbuntuX86-64-target
 * Update `/etc/dhcp/dhcpd.conf` in the dhcpsvr container based on your ethernet mac addresses from above
