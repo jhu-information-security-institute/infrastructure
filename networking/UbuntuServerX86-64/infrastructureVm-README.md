@@ -21,6 +21,7 @@
   * Run `$ ip route show` in a terminal and use whatever ip address the "default via XXX.XXX.XXX.XXX" is
   * Ensure that the device names `ens??` match with those created in your vm
   * Note: only the first 3 interfaces are used (e.g., ens33, ens37, and ens38)
+* Ensure that the device names `ens??` within `~/netplan/100-config.yaml` match with those created in your vm
 * To eliminate the warnings shown below, run the commands below to restrict the permissions on the netplan *.yaml configuration files
   ```
   $ sudo chmod 600 /etc/netplan/99-config.yaml
@@ -32,7 +33,6 @@
     ** (generate:3569): WARNING **: 14:10:11.987: Permissions for /etc/netplan/99-config.yaml are too open. Netplan configuration should NOT be accessible by others.
     ``` 
 * Run `$ sudo netplan apply`
-* Ensure that the device names `ens??` within `~/netplan/100-config.yaml` match with those created in your vm
 * Ensure that /etc/NetworkManager/NetworkManager.conf has the lines below
   ```
   [ifupdown]
