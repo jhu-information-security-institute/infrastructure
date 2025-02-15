@@ -26,7 +26,7 @@
   
 # Final setup
 * Use `$ ip link show` to query the ethernet mac addresses the VMNet1 virtual network adapters on UbuntuX86-64-target
-* Update `/etc/dhcp/dhcpd.conf` in the dhcpsvr container based on your ethernet mac addresses from above
+* Update `/etc/dhcp/dhcpd.conf` and `/etc/default/isc-dhcp-server` in the dhcpsvr container based on your ethernet mac addresses from above
 * Reload and restart isc-server-dhcp in your container
 * Shutdown UbuntuServerX86-64-target and take a snapshot
 
