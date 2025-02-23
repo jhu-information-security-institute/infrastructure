@@ -16,11 +16,9 @@ $TTL	604800
 ; Ubuntu Infrastructure
 10.25.168.192.in-addr.arpa.	IN	PTR	ns.netsec-docker.isi.jhu.edu.		; 192.168.25.10
 5.25.168.192.in-addr.arpa.	IN	PTR	dhcp.netsec-docker.isi.jhu.edu.		; 192.168.25.5
+11.25.168.192.in-addr.arpa.	IN	PTR	auth.netsec-docker.isi.jhu.edu.		; 192.168.25.11
 14.25.168.192.in-addr.arpa.	IN	PTR	ids.netsec-docker.isi.jhu.edu.		; 192.168.25.14
 15.25.168.192.in-addr.arpa.	IN	PTR	siem.netsec-docker.isi.jhu.edu.		; 192.168.25.15
-
-; CentOS Infrastructure
-11.25.168.192.in-addr.arpa.	IN	PTR	auth.netsec-docker.isi.jhu.edu.		; 192.168.25.11
 
 ; Ubuntu Target
 120.25.168.192.in-addr.arpa.	IN	PTR	term.netsec-docker.isi.jhu.edu.		; 192.168.25.120
