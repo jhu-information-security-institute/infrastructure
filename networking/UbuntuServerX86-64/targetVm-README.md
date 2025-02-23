@@ -11,6 +11,7 @@
     ```
 * Change into the downloaded `targetVm/config/UbuntuServerX86-64` directory
 * Run the installer using: `$ sudo ./targetVm-install.sh`
+    * Note: this step disabled NetworkManager
 * Edit nameserver IP address and domain name in nameserver section of `ens33` portion within `/etc/netplan/101-config.yaml` to values for your internet router
   * Ensure that the device names `ens??` within `/etc/netplan/101-config.yaml` match with those created in your vm
 * Ensure that /etc/NetworkManager/NetworkManager.conf has the lines below
@@ -18,11 +19,15 @@
     [ifupdown]
     managed=false
     ```
-
+* Run the commands below to restrict the permissions on the netplan *.yaml configuration files
+  ```
+  $ sudo chmod 600 /etc/netplan/101-config.yaml
+  ```
+  
 # Final setup
 * Use `$ ip link show` to query the ethernet mac addresses the VMNet1 virtual network adapters on UbuntuX86-64-target
-* Update `/etc/dhcp/dhcpd.conf` in the dhcpsvr project based on your ethernet mac addresses from above
-* Reload and restart isc-server-dhcp in your container
+* Similar to the step for the infrastructure VM, update `/etc/dhcp/dhcpd.conf` and `/etc/default/isc-dhcp-server` in the dhcpsvr container (on the infrastructure VM) based on your ethernet mac addresses from above
+* Reload and restart isc-server-dhcp in the infrastructure VM's container
 * Shutdown UbuntuServerX86-64-target and take a snapshot
 
 # Startup

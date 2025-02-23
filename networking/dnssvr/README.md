@@ -4,7 +4,7 @@ Versatile, classic, complete name server software
 BIND 9 has evolved to be a very flexible, full-featured DNS system. Whatever your application is, BIND 9 probably has the required features. As the first, oldest, and most commonly deployed solution, there are more network engineers who are already familiar with BIND 9 than with any other system.
 
 # Runtime environment setup
-1. Download files to build container
+1. Download files to build container into a sandbox directory using
     ```
     $ wget https://raw.githubusercontent.com/jhu-information-security-institute/infrastructure/main/networking/dnssvr/dnssvr-UbuntuServerX86-64.sh
     $ chmod +x dnssvr-UbuntuServerX86-64.sh
@@ -14,14 +14,14 @@ BIND 9 has evolved to be a very flexible, full-featured DNS system. Whatever you
     ```
     $ docker build -t tdnssvr .
     $ docker run -d --name dnssvr --hostname ns.netsec-docker.isi.jhu.edu --add-host ns.netsec-docker.isi.jhu.edu:127.0.1.1 --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --security-opt seccomp=unconfined --cgroup-parent=docker.slice --cgroupns private --tmpfs /tmp --tmpfs /run --tmpfs /run/lock --network host --cpus=1 tdnssvr:latest
-    $ sudo docker exec -it dnssvr bash 
+    $ docker exec -it dnssvr bash 
     ```
-1. Enable the server using: `$ sudo systemctl enable bind9`
+1. Enable the server using: `(container) # systemctl enable bind9`
 
 ## Notes
-* Restart the server using: `# systemctl restart bind9`
-* Check the server status (there should be no errors) using: `# systemctl status bind9`
-* View the server log: `# journalctl -u bind9`
+* Restart the server using: `(container) # systemctl restart bind9`
+* Check the server status (there should be no errors) using: `(container) # systemctl status bind9`
+* View the server log: `(container) # journalctl -u bind9`
 * Configure the server by editing `/etc/bind/zones/db.25.168.192` and `/etc/bind/zones/db.netsec-docker.isi.jhu.edu`
 
 # Useful websites

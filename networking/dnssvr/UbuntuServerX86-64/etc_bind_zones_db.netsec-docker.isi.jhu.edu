@@ -13,20 +13,16 @@ $ORIGIN netsec-docker.isi.jhu.edu.	;base domain name
 ; name servers - NS records
 netsec-docker.isi.jhu.edu.		IN	NS	ns.netsec-docker.isi.jhu.edu.
 
-; name servers - A records
-ns.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.10
-
 ; mail servers - MX records
 netsec-docker.isi.jhu.edu.		IN	MX	0	email.netsec-docker.isi.jhu.edu.
 
 ; hosts
 ; Ubuntu Infrastructure
 dhcp.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.5
+ns.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.10
+auth.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.11
 ids.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.14
 siem.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.15
-
-; CentOS Infrastructure
-auth.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.11
 
 ; Ubuntu Target
 term.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.120
