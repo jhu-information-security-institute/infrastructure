@@ -19,12 +19,12 @@ The Suricata instance on Ubuntu runs in a Docker container in our main infrastru
     $ docker run -d --name suricata --hostname suricata.netsec-docker.isi.jhu.edu --add-host suricata.netsec-docker.isi.jhu.edu:127.0.1.1 --dns 192.168.25.10 --dns-search netsec-docker.isi.jhu.edu --privileged --security-opt seccomp=unconfined --cgroup-parent=docker.slice --cgroupns private --tmpfs /tmp --tmpfs /run --tmpfs /run/lock --network host --cpus=1 tsuricata:latest   
     $ docker exec -it suricata bash 
     ```
-1. Review the settings in /etc/default/suricata
-    * Inspect the IFACE setting (note: this setting must match your interface name for the interface associated with ids.netsec-docker.isi.jhu.edu)
+1. Review the settings in `/etc/default/suricata`
+    * Inspect the `IFACE` setting (note: this setting must match your interface name for the interface associated with `ids.netsec-docker.isi.jhu.edu`)
 1. Review the settings in /etc/suricata/suricata.yaml
-    * Inspect the HOME_NET and EXTERNEL_NET settings
-    * Inspect the interface setting in af-packet section (note: this setting must match your interface name for the interface associated with ids.netsec-docker.isi.jhu.edu)
-    * Inspect the files listed in the rule-files section    
+    * Inspect the `HOME_NET` and `EXTERNEL_NET` settings
+    * Inspect the `interface` setting in `af-packet` section (note: this setting must match your interface name for the interface associated with `ids.netsec-docker.isi.jhu.edu`)
+    * Inspect the files listed in the `rule-files` section    
 1. Edit `/var/lib/suricata/rules/test-ping.rules` and update IP addresseses appropriately
 1. Reload rules
 1. Restart Suricata
