@@ -26,8 +26,12 @@ The Suricata instance on Ubuntu runs in a Docker container in our main infrastru
     * Inspect the `interface` setting in `af-packet` section (note: this setting must match your interface name for the interface associated with `ids.netsec-docker.isi.jhu.edu`)
     * Inspect the files listed in the `rule-files` section    
 1. Edit `/var/lib/suricata/rules/test-ping.rules` and update IP addresseses appropriately
-1. Reload rules
-1. Restart Suricata
+1. Reload rules by running:
+   ```
+   # systemctl daemon-reload
+   # suricata-update
+   ```
+1. Restart Suricata by running: `# systemctl restart suricata`
 
 # Notes
 * Signature files located in `/var/lib/suricata/rules`
