@@ -41,3 +41,4 @@ The Suricata instance on Ubuntu runs in a Docker container in our main infrastru
 
 # Useful websites
 * https://suricata.io
+* https://docs.suricata.io/en/latest/rules/header-keywords.html
