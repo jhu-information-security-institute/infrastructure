@@ -29,3 +29,6 @@ term.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.120
 web.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.121
 email.netsec-docker.isi.jhu.edu.	IN	A	192.168.25.122
 nas.netsec-docker.isi.jhu.edu.		IN	A	192.168.25.123
+
+; Kali Target
+attack.netsec-docker.isi.jhu.edu.	IN	A	192.168.25.100

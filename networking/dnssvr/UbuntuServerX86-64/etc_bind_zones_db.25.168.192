@@ -14,8 +14,8 @@ $TTL	604800
 
 ; PTR records
 ; Ubuntu Infrastructure
-10.25.168.192.in-addr.arpa.	IN	PTR	ns.netsec-docker.isi.jhu.edu.		; 192.168.25.10
 5.25.168.192.in-addr.arpa.	IN	PTR	dhcp.netsec-docker.isi.jhu.edu.		; 192.168.25.5
+10.25.168.192.in-addr.arpa.	IN	PTR	ns.netsec-docker.isi.jhu.edu.		; 192.168.25.10
 11.25.168.192.in-addr.arpa.	IN	PTR	auth.netsec-docker.isi.jhu.edu.		; 192.168.25.11
 14.25.168.192.in-addr.arpa.	IN	PTR	ids.netsec-docker.isi.jhu.edu.		; 192.168.25.14
 15.25.168.192.in-addr.arpa.	IN	PTR	siem.netsec-docker.isi.jhu.edu.		; 192.168.25.15
@@ -25,3 +25,6 @@ $TTL	604800
 121.25.168.192.in-addr.arpa.	IN	PTR	web.netsec-docker.isi.jhu.edu.		; 192.168.25.121
 122.25.168.192.in-addr.arpa.	IN	PTR	mail.netsec-docker.isi.jhu.edu.		; 192.168.25.122
 123.25.168.192.in-addr.arpa.	IN	PTR	nas.netsec-docker.isi.jhu.edu.		; 192.168.25.123
+
+; Kali Target
+100.25.168.192.in-addr.arpa.	IN	PTR	attack.netsec-docker.isi.jhu.edu.	; 192.168.25.100
