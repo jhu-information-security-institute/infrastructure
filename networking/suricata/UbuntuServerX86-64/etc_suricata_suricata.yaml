@@ -578,7 +578,7 @@ logging:
 
 # Linux high speed capture support
 af-packet:
-  - interface: ens38
+  - interface: ens40
     # Number of receive threads. "auto" uses the number of cores
     #threads: auto
     # Default clusterid. AF_PACKET will load balance packets based on flow.
@@ -1865,7 +1865,9 @@ default-rule-path: /var/lib/suricata/rules
 
 rule-files:
 ##  - suricata.rules
-  - test-dos.rules	
+  - test-dos.rules
+  - test-mail.rules
+  - test-ping.rules    
 
 ##
 ## Auxiliary configuration files.
