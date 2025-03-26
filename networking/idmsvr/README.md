@@ -60,7 +60,7 @@ The freeipa server instances on CentOS run in a single docker container.
 
 # Runtime environment setup
 
-**Below is no longer working.  Do not use Docker with this assignment right now**
+**Below is no longer working.  Do not use Docker with this part of the assignment right now**
 
 ## CentOS
 1. Download files to build container
