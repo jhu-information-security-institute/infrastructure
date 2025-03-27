@@ -1,7 +1,15 @@
 # Application overview
 ## freeipa-server
-* setup DNS and the hostname in the VM
-* build the container as instructed below
+* setup DNS and the hostname in the host
+* (do not perform this step at present)-build the container as instructed below
+* setup chrony server (ntp)
+   ```
+   # apt-get install chrony
+   ```
+•	Allow hosts on netsec.isi.jhu.edu to reach chrony by adding the following to `/etc/chrony.conf`
+   ```
+   allow 192.168.25.0/24
+   ```
 * configure ipa server: `# ipa-server-install --hostname=auth.netsec-docker.isi.jhu.edu --domain=netsec-docker.isi.jhu.edu --realm=NETSEC-DOCKER.ISI.JHU.EDU`
     * say no when asked to configure integrated DNS
     * specify passwords when prompted
