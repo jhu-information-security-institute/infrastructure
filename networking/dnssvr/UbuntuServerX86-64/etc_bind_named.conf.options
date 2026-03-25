@@ -28,6 +28,6 @@ options {
 	allow-transfer { none; }; //disable by default
     allow-query { trusted; };
     
-	listen-on { any; };
+	listen-on { 192.168.25.10; };
 	listen-on-v6 { none; };
 };
