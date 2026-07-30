@@ -1,4 +1,4 @@
-Details for infrastructure that is common to EN.650.660 (Software Vulnerability Analysis) and EN.650.624 (Network Security)
+Details for infrastructure that is common to courses I have taught.
 
 See the [Wiki](https://github.com/jhu-information-security-institute/infrastructure/wiki)!
 
